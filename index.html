@@ -752,6 +752,120 @@
             gap: 8px;
         }
 
+        /* Video Gallery Section Styles */
+        .video-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .video-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .video-thumb-container {
+            position: relative;
+            width: 100%;
+            height: 210px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+            transition: transform 0.4s ease;
+        }
+
+        .video-card:hover .video-thumb {
+            transform: scale(1.08);
+            opacity: 0.7;
+        }
+
+        .video-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(15, 23, 42, 0.85);
+            color: #38BDF8;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            z-index: 2;
+        }
+
+        .play-overlay-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 58px;
+            height: 58px;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            text-decoration: none;
+            box-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .play-overlay-btn:hover {
+            transform: translate(-50%, -50%) scale(1.15);
+            background: var(--primary);
+            box-shadow: 0 0 25px rgba(184, 134, 11, 0.8);
+        }
+
+        .video-card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .video-card-body h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+
+        .video-card-body p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .video-card-actions {
+            display: flex;
+            gap: 10px;
+        }
+
         /* Responsive Media Queries */
         @media (max-width: 992px) {
             .hero-container {
@@ -784,7 +898,7 @@
     <!-- Top Announcement Bar -->
     <div class="top-bar">
         <span><i class="fa-solid fa-certificate"></i> RERA Approved</span>
-        Reg No: RAJ/P/2026/4660 | 90% Bank Loan Approved | Free Weekend Site Visit Cab Available!
+        Reg No: RAJ/P/2026/4660 | 80% Bank Loan Approved | Free Weekend Site Visit Cab Available!
     </div>
 
     <!-- Header / Navbar -->
@@ -804,6 +918,7 @@
                 <li><a href="#overview">Overview</a></li>
                 <li><a href="#features">Key Features</a></li>
                 <li><a href="#theme">Ramayan Theme</a></li>
+                <li><a href="#videos">Project Videos</a></li>
                 <li><a href="#site-visit">Book Site Visit</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
@@ -826,7 +941,7 @@
                 <div class="hero-badge-container">
                     <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> RERA Reg: RAJ/P/2026/4660</div>
                     <div class="hero-badge"><i class="fa-solid fa-landmark"></i> 136 बीघा Planned Township</div>
-                    <div class="hero-badge"><i class="fa-solid fa-building-columns"></i> 90% Bank Loan Approved</div>
+                    <div class="hero-badge"><i class="fa-solid fa-building-columns"></i> 80% Bank Loan Approved</div>
                 </div>
 
                 <h1 class="hero-title">श्री राम आंगण टाउनशिप (Shree Ram Aangan Township)</h1>
@@ -925,7 +1040,7 @@
                 <p>विशाल मुख्य प्रवेश द्वार</p>
             </div>
             <div class="stat-item">
-                <h3>90%</h3>
+                <h3>80%</h3>
                 <p>बैंक लोन की सुविधा</p>
             </div>
         </div>
@@ -957,8 +1072,8 @@
             </div>
             <div class="feature-card">
                 <div class="feature-icon-wrapper"><i class="fa-solid fa-building-columns"></i></div>
-                <h4>90% Bank Loan Approved</h4>
-                <p>सभी प्रमुख राष्ट्रीयकृत बैंकों से 90% तक होम/प्लॉट लोन की आसान सुविधा उपलब्ध। आसान EMI ऑप्शंस।</p>
+                <h4>80% Bank Loan Approved</h4>
+                <p>सभी प्रमुख राष्ट्रीयकृत बैंकों से 80% तक होम/प्लॉट लोन की आसान सुविधा उपलब्ध। आसान EMI ऑप्शंस।</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon-wrapper"><i class="fa-solid fa-store"></i></div>
@@ -1000,6 +1115,88 @@
                 <div class="theme-card-icon"><i class="fa-solid fa-people-roof"></i></div>
                 <h4>कम्युनिटी & क्लब हाउस</h4>
                 <p>रेजिडेंट्स के लिए आधुनिक क्लब हाउस, रीक्रिएशनल फैसिलिटीज और चिल्ड्रेन प्ले एरिया</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Video Tour & Site Walkthrough Section -->
+    <section class="section" id="videos" style="background: #F1F5F9;">
+        <div class="section-header">
+            <span class="section-subtitle"><i class="fa-solid fa-circle-play" style="color: var(--secondary);"></i> LIVE SITE & TOUR VIDEOS</span>
+            <h2 class="section-title">श्री राम आंगण - प्रोजेक्ट वीडियो टूर & वाकथ्रू</h2>
+            <p style="color: var(--text-muted); max-width: 750px; margin: 12px auto 0 auto; font-size: 1rem; line-height: 1.6;">
+                136 बीघा में हो रहे वास्तविक विकास (Site Development), 200 Feet टोंक रोड कनेक्टिविटी एवं श्री राम मंदिर परिसर की गूगल ड्राइव वीडियो झलकियाँ देखें।
+            </p>
+        </div>
+
+        <div class="video-grid">
+            <!-- Video Card 1 -->
+            <div class="video-card">
+                <div class="video-thumb-container">
+                    <div class="video-badge"><i class="fa-brands fa-google-drive"></i> Drive Video</div>
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="136 बीघा टाउनशिप ड्रोन वीडियो" class="video-thumb">
+                    <a href="https://drive.google.com/drive/folders/1JnBa2v6-WU1MYMQCnmVU7rDEd79eebXD" target="_blank" class="play-overlay-btn" title="Watch Video on Google Drive">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="video-card-body">
+                    <h4><i class="fa-solid fa-video" style="color: var(--primary);"></i> 136 बीघा साइट डेवलपमेंट वीडियो</h4>
+                    <p>प्रोजेक्ट की 136 बीघा जमीन, बाउंड्री वॉल, डिमार्केशन एवं ऑन-साइट डेवलपमेंट का ड्रोन/साइट वॉच वीडियो।</p>
+                    <div class="video-card-actions">
+                        <a href="https://drive.google.com/drive/folders/1JnBa2v6-WU1MYMQCnmVU7rDEd79eebXD" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 8px 16px; flex: 1;">
+                            <i class="fa-brands fa-google-drive"></i> Watch on Drive
+                        </a>
+                        <a href="https://wa.me/918739904737?text=Namaste!%20Mujhe%20Shree%20Ram%20Aangan%20ka%20Site%20Development%20Video%20chahiye." target="_blank" class="btn btn-whatsapp" style="font-size: 0.85rem; padding: 8px 16px;">
+                            <i class="fa-brands fa-whatsapp"></i> Get Video
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Card 2 -->
+            <div class="video-card">
+                <div class="video-thumb-container">
+                    <div class="video-badge"><i class="fa-brands fa-google-drive"></i> Drive Video</div>
+                    <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80" alt="श्री राम मंदिर परिसर वीडियो" class="video-thumb">
+                    <a href="https://drive.google.com/drive/folders/1qwlCGbyELfaFuin6HP7v-witnbvsuP1V" target="_blank" class="play-overlay-btn" title="Watch Video on Google Drive">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="video-card-body">
+                    <h4><i class="fa-solid fa-gopuram" style="color: var(--secondary);"></i> श्री राम मंदिर & रामायण पार्क टूर</h4>
+                    <p>टाउनशिप में निर्मित हो रहे भव्य श्री राम मंदिर परिसर, हनुमान जी मंदिर एवं रामायण पार्क का वॉकथ्रू वीडियो।</p>
+                    <div class="video-card-actions">
+                        <a href="https://drive.google.com/drive/folders/1qwlCGbyELfaFuin6HP7v-witnbvsuP1V" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 8px 16px; flex: 1;">
+                            <i class="fa-brands fa-google-drive"></i> Watch on Drive
+                        </a>
+                        <a href="https://wa.me/918739904737?text=Namaste!%20Mujhe%20Ram%20Mandir%20Theme%20Park%20ka%20Video%20chahiye." target="_blank" class="btn btn-whatsapp" style="font-size: 0.85rem; padding: 8px 16px;">
+                            <i class="fa-brands fa-whatsapp"></i> Get Video
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Card 3 -->
+            <div class="video-card">
+                <div class="video-thumb-container">
+                    <div class="video-badge"><i class="fa-brands fa-google-drive"></i> Drive Video</div>
+                    <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80" alt="200 Feet टोंक रोड एंट्रेंस वीडियो" class="video-thumb">
+                    <a href="https://drive.google.com/drive/folders/1JrIJ9G2eQvyX3-6x3zm0bMYCLyDQ_vCt" target="_blank" class="play-overlay-btn" title="Watch Video on Google Drive">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                </div>
+                <div class="video-card-body">
+                    <h4><i class="fa-solid fa-road" style="color: var(--call);"></i> 200 Ft टोंक रोड & 150 Ft मुख्य द्वार</h4>
+                    <p>नेशनल हाइवे टोंक रोड से 200 फीट चौड़ी रोड कनेक्टिविटी एवं 150 फीट चौड़े भव्य प्रवेश द्वार का साइट वीडियो।</p>
+                    <div class="video-card-actions">
+                        <a href="https://drive.google.com/drive/folders/1JrIJ9G2eQvyX3-6x3zm0bMYCLyDQ_vCt" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 8px 16px; flex: 1;">
+                            <i class="fa-brands fa-google-drive"></i> Watch on Drive
+                        </a>
+                        <a href="https://wa.me/918739904737?text=Namaste!%20Mujhe%20200ft%20Tonk%20Road%20Connectivity%20Video%20chahiye." target="_blank" class="btn btn-whatsapp" style="font-size: 0.85rem; padding: 8px 16px;">
+                            <i class="fa-brands fa-whatsapp"></i> Get Video
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1083,7 +1280,7 @@
                     <i class="fa-solid fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer">
-                    जी हाँ! राष्ट्रीयकृत एवं प्रमुख प्राइवेट बैंकों द्वारा 90% तक बैंक लोन स्वीकृत (Approved) है। हमारी टीम आपको लोन प्रक्रिया में पूरी सहायता प्रदान करेगी।
+                    जी हाँ! राष्ट्रीयकृत एवं प्रमुख प्राइवेट बैंकों द्वारा 80% तक बैंक लोन स्वीकृत (Approved) है। हमारी टीम आपको लोन प्रक्रिया में पूरी सहायता प्रदान करेगी।
                 </div>
             </div>
 
