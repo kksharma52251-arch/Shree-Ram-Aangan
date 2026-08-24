@@ -6,7 +6,7 @@
     <title>Shree Ram Aangan Township | Tonk Road, Chaksu, Jaipur | Shree Aangan Developer</title>
     <!-- Primary Meta Tags -->
     <meta name="title" content="Shree Ram Aangan Township | Tonk Road, Chaksu, Jaipur">
-    <meta name="description" content="136 बीघा की विशाल RERA अप्रूव्ड थीम बेस्ड टाउनशिप - श्री राम आंगण टाउनशिप, टोंक रोड, चाकसू, जयपुर। RERA Reg: RAJ/P/2026/4660 | Call: 8739904737">
+    <meta name="description" content="136 à¤¬à¥€à¤˜à¤¾ à¤•à¥€ à¤µà¤¿à¤¶à¤¾à¤² RERA à¤…à¤ªà¥à¤°à¥‚à¤µà¥à¤¡ à¤¥à¥€à¤® à¤¬à¥‡à¤¸à¥à¤¡ à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª - à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤†à¤‚à¤—à¤£ à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª, à¤Ÿà¥‹à¤‚à¤• à¤°à¥‹à¤¡, à¤šà¤¾à¤•à¤¸à¥‚, à¤œà¤¯à¤ªà¥à¤°à¥¤ RERA Reg: RAJ/P/2026/4660 | Call: 8739904737">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -866,6 +866,107 @@
             gap: 10px;
         }
 
+        /* Video Popup Modal Styles */
+        .video-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(8px);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .video-modal-overlay.active {
+            display: flex;
+        }
+
+        .video-modal-content {
+            background: #0F172A;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 880px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            position: relative;
+            animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.92); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .video-modal-header {
+            padding: 16px 24px;
+            background: #1E293B;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .video-modal-header h3 {
+            color: #F8FAFC;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .video-modal-close {
+            background: rgba(255,255,255,0.1);
+            color: #FFF;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .video-modal-close:hover {
+            background: var(--secondary);
+            transform: rotate(90deg);
+        }
+
+        .video-modal-body {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background: #000;
+        }
+
+        .video-modal-body iframe,
+        .video-modal-body video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-modal-footer {
+            padding: 14px 24px;
+            background: #1E293B;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
         /* Responsive Media Queries */
         @media (max-width: 992px) {
             .hero-container {
@@ -909,8 +1010,8 @@
                     <i class="fa-solid fa-gopuram"></i>
                 </div>
                 <div class="brand-text">
-                    <h1>श्री राम आंगण (Shree Ram Aangan)</h1>
-                    <p>Shree Aangan Developer • Tonk Road, Jaipur</p>
+                    <h1>à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤†à¤‚à¤—à¤£ (Shree Ram Aangan)</h1>
+                    <p>Shree Aangan Developer â€¢ Tonk Road, Jaipur</p>
                 </div>
             </a>
             
@@ -940,12 +1041,12 @@
             <div class="hero-content">
                 <div class="hero-badge-container">
                     <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> RERA Reg: RAJ/P/2026/4660</div>
-                    <div class="hero-badge"><i class="fa-solid fa-landmark"></i> 136 बीघा Planned Township</div>
+                    <div class="hero-badge"><i class="fa-solid fa-landmark"></i> 136 à¤¬à¥€à¤˜à¤¾ Planned Township</div>
                     <div class="hero-badge"><i class="fa-solid fa-building-columns"></i> 80% Bank Loan Approved</div>
                 </div>
 
-                <h1 class="hero-title">श्री राम आंगण टाउनशिप (Shree Ram Aangan Township)</h1>
-                <p class="hero-subtitle">टोंक रोड (चाकसू), जयपुर - राम मंदिर एवं रामायण थीम आधारित 136 बीघा की विशाल RERA अप्रूव्ड टाउनशिप में अपने सपनों का प्लॉट बुक करें।</p>
+                <h1 class="hero-title">à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤†à¤‚à¤—à¤£ à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª (Shree Ram Aangan Township)</h1>
+                <p class="hero-subtitle">à¤Ÿà¥‹à¤‚à¤• à¤°à¥‹à¤¡ (à¤šà¤¾à¤•à¤¸à¥‚), à¤œà¤¯à¤ªà¥à¤° - à¤°à¤¾à¤® à¤®à¤‚à¤¦à¤¿à¤° à¤à¤µà¤‚ à¤°à¤¾à¤®à¤¾à¤¯à¤£ à¤¥à¥€à¤® à¤†à¤§à¤¾à¤°à¤¿à¤¤ 136 à¤¬à¥€à¤˜à¤¾ à¤•à¥€ à¤µà¤¿à¤¶à¤¾à¤² RERA à¤…à¤ªà¥à¤°à¥‚à¤µà¥à¤¡ à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª à¤®à¥‡à¤‚ à¤…à¤ªà¤¨à¥‡ à¤¸à¤ªà¤¨à¥‹à¤‚ à¤•à¤¾ à¤ªà¥à¤²à¥‰à¤Ÿ à¤¬à¥à¤• à¤•à¤°à¥‡à¤‚à¥¤</p>
 
                 <div class="hero-features-grid">
                     <div class="hero-feature-item">
@@ -988,32 +1089,32 @@
             <div class="form-card" id="inquiry-form">
                 <div class="form-header">
                     <h3><i class="fa-solid fa-paper-plane" style="color: var(--secondary);"></i> Get Price List & Brochure</h3>
-                    <p>भरें और तुरंत पूरी जानकारी व्हाट्सएप पर पाएं</p>
+                    <p>à¤­à¤°à¥‡à¤‚ à¤”à¤° à¤¤à¥à¤°à¤‚à¤¤ à¤ªà¥‚à¤°à¥€ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€ à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤ªà¤° à¤ªà¤¾à¤à¤‚</p>
                 </div>
                 <form id="leadForm" onsubmit="submitForm(event)">
                     <div class="form-group">
-                        <label>आपका नाम (Full Name) *</label>
-                        <input type="text" class="form-input" id="userName" placeholder="अपना नाम दर्ज करें" required>
+                        <label>à¤†à¤ªà¤•à¤¾ à¤¨à¤¾à¤® (Full Name) *</label>
+                        <input type="text" class="form-input" id="userName" placeholder="à¤…à¤ªà¤¨à¤¾ à¤¨à¤¾à¤® à¤¦à¤°à¥à¤œ à¤•à¤°à¥‡à¤‚" required>
                     </div>
                     <div class="form-group">
-                        <label>मोबाइल नंबर (Mobile Number) *</label>
-                        <input type="tel" class="form-input" id="userPhone" placeholder="10-अंकों का मोबाइल नंबर" pattern="[0-9]{10}" required>
+                        <label>à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤° (Mobile Number) *</label>
+                        <input type="tel" class="form-input" id="userPhone" placeholder="10-à¤…à¤‚à¤•à¥‹à¤‚ à¤•à¤¾ à¤®à¥‹à¤¬à¤¾à¤‡à¤² à¤¨à¤‚à¤¬à¤°" pattern="[0-9]{10}" required>
                     </div>
                     <div class="form-group">
-                        <label>आपकी आवश्यकता (Requirement) *</label>
+                        <label>à¤†à¤ªà¤•à¥€ à¤†à¤µà¤¶à¥à¤¯à¤•à¤¤à¤¾ (Requirement) *</label>
                         <select class="form-input" id="userReq">
-                            <option value="Residential Plot">Residential Plot (रहने के लिए प्लॉट)</option>
-                            <option value="Commercial Plot">Commercial Plot (व्यापारिक प्लॉट)</option>
-                            <option value="Commercial Shop">Commercial Shop (कमर्शियल दुकान)</option>
-                            <option value="Investment Purpose">Investment (निवेश के लिए)</option>
+                            <option value="Residential Plot">Residential Plot (à¤°à¤¹à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ à¤ªà¥à¤²à¥‰à¤Ÿ)</option>
+                            <option value="Commercial Plot">Commercial Plot (à¤µà¥à¤¯à¤¾à¤ªà¤¾à¤°à¤¿à¤• à¤ªà¥à¤²à¥‰à¤Ÿ)</option>
+                            <option value="Commercial Shop">Commercial Shop (à¤•à¤®à¤°à¥à¤¶à¤¿à¤¯à¤² à¤¦à¥à¤•à¤¾à¤¨)</option>
+                            <option value="Investment Purpose">Investment (à¤¨à¤¿à¤µà¥‡à¤¶ à¤•à¥‡ à¤²à¤¿à¤)</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>साइट विजिट की योजना (Free Site Visit Plan)</label>
+                        <label>à¤¸à¤¾à¤‡à¤Ÿ à¤µà¤¿à¤œà¤¿à¤Ÿ à¤•à¥€ à¤¯à¥‹à¤œà¤¨à¤¾ (Free Site Visit Plan)</label>
                         <select class="form-input" id="userVisit">
-                            <option value="This Weekend (Saturday/Sunday)">इस वीकेंड (Free Site Visit)</option>
-                            <option value="In 2-3 Days">अगले 2-3 दिनों में</option>
-                            <option value="Just Need Information">केवल व्हाट्सएप पर जानकारी चाहिए</option>
+                            <option value="This Weekend (Saturday/Sunday)">à¤‡à¤¸ à¤µà¥€à¤•à¥‡à¤‚à¤¡ (Free Site Visit)</option>
+                            <option value="In 2-3 Days">à¤…à¤—à¤²à¥‡ 2-3 à¤¦à¤¿à¤¨à¥‹à¤‚ à¤®à¥‡à¤‚</option>
+                            <option value="Just Need Information">à¤•à¥‡à¤µà¤² à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤ªà¤° à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€ à¤šà¤¾à¤¹à¤¿à¤</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary form-submit">
@@ -1029,19 +1130,19 @@
         <div class="stats-grid">
             <div class="stat-item">
                 <h3>136+</h3>
-                <p>बीघा विशाल टाउनशिप एरिया</p>
+                <p>à¤¬à¥€à¤˜à¤¾ à¤µà¤¿à¤¶à¤¾à¤² à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª à¤à¤°à¤¿à¤¯à¤¾</p>
             </div>
             <div class="stat-item">
                 <h3>200 Ft</h3>
-                <p>टोंक रोड (NH-52) फ्रंट की कनेक्टिविटी</p>
+                <p>à¤Ÿà¥‹à¤‚à¤• à¤°à¥‹à¤¡ (NH-52) à¤«à¥à¤°à¤‚à¤Ÿ à¤•à¥€ à¤•à¤¨à¥‡à¤•à¥à¤Ÿà¤¿à¤µà¤¿à¤Ÿà¥€</p>
             </div>
             <div class="stat-item">
                 <h3>150 Ft</h3>
-                <p>विशाल मुख्य प्रवेश द्वार</p>
+                <p>à¤µà¤¿à¤¶à¤¾à¤² à¤®à¥à¤–à¥à¤¯ à¤ªà¥à¤°à¤µà¥‡à¤¶ à¤¦à¥à¤µà¤¾à¤°</p>
             </div>
             <div class="stat-item">
                 <h3>80%</h3>
-                <p>बैंक लोन की सुविधा</p>
+                <p>à¤¬à¥ˆà¤‚à¤• à¤²à¥‹à¤¨ à¤•à¥€ à¤¸à¥à¤µà¤¿à¤§à¤¾</p>
             </div>
         </div>
     </div>
@@ -1051,39 +1152,39 @@
     <section class="section" id="features">
         <div class="section-header">
             <span class="section-subtitle">WORLD CLASS AMENITIES</span>
-            <h2 class="section-title">श्री राम आंगण टाउनशिप की मुख्य विशेषताएं</h2>
+            <h2 class="section-title">à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤†à¤‚à¤—à¤£ à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª à¤•à¥€ à¤®à¥à¤–à¥à¤¯ à¤µà¤¿à¤¶à¥‡à¤·à¤¤à¤¾à¤à¤‚</h2>
         </div>
 
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon-wrapper"><i class="fa-solid fa-shield-cat"></i></div>
                 <h4>RERA Approved & Clear Title</h4>
-                <p>राजस्थान RERA द्वारा पंजीकृत (Reg No: RAJ/P/2026/4660)। 100% क्लियर टाइटल, जेडीए अप्रूव्ड और सुरक्षित निवेश।</p>
+                <p>à¤°à¤¾à¤œà¤¸à¥à¤¥à¤¾à¤¨ RERA à¤¦à¥à¤µà¤¾à¤°à¤¾ à¤ªà¤‚à¤œà¥€à¤•à¥ƒà¤¤ (Reg No: RAJ/P/2026/4660)à¥¤ 100% à¤•à¥à¤²à¤¿à¤¯à¤° à¤Ÿà¤¾à¤‡à¤Ÿà¤², à¤œà¥‡à¤¡à¥€à¤ à¤…à¤ªà¥à¤°à¥‚à¤µà¥à¤¡ à¤”à¤° à¤¸à¥à¤°à¤•à¥à¤·à¤¿à¤¤ à¤¨à¤¿à¤µà¥‡à¤¶à¥¤</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon-wrapper"><i class="fa-solid fa-road"></i></div>
                 <h4>200 Ft Tonk Road Connectivity</h4>
-                <p>200 फीट चौड़े नेशनल हाइवे टोंक रोड, 45 मीटर मास्टर प्लान रोड और 150 फीट चौड़े भव्य प्रवेश द्वार से सीधी कनेक्टिविटी।</p>
+                <p>200 à¤«à¥€à¤Ÿ à¤šà¥Œà¤¡à¤¼à¥‡ à¤¨à¥‡à¤¶à¤¨à¤² à¤¹à¤¾à¤‡à¤µà¥‡ à¤Ÿà¥‹à¤‚à¤• à¤°à¥‹à¤¡, 45 à¤®à¥€à¤Ÿà¤° à¤®à¤¾à¤¸à¥à¤Ÿà¤° à¤ªà¥à¤²à¤¾à¤¨ à¤°à¥‹à¤¡ à¤”à¤° 150 à¤«à¥€à¤Ÿ à¤šà¥Œà¤¡à¤¼à¥‡ à¤­à¤µà¥à¤¯ à¤ªà¥à¤°à¤µà¥‡à¤¶ à¤¦à¥à¤µà¤¾à¤° à¤¸à¥‡ à¤¸à¥€à¤§à¥€ à¤•à¤¨à¥‡à¤•à¥à¤Ÿà¤¿à¤µà¤¿à¤Ÿà¥€à¥¤</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon-wrapper"><i class="fa-solid fa-gopuram"></i></div>
                 <h4>Shri Ram & Ramayan Theme</h4>
-                <p>टाउनशिप में भव्य श्री राम मंदिर, हनुमान जी का मंदिर, रामायण थीम आधारित पार्क और धार्मिक व आध्यात्मिक माहौल।</p>
+                <p>à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª à¤®à¥‡à¤‚ à¤­à¤µà¥à¤¯ à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤®à¤‚à¤¦à¤¿à¤°, à¤¹à¤¨à¥à¤®à¤¾à¤¨ à¤œà¥€ à¤•à¤¾ à¤®à¤‚à¤¦à¤¿à¤°, à¤°à¤¾à¤®à¤¾à¤¯à¤£ à¤¥à¥€à¤® à¤†à¤§à¤¾à¤°à¤¿à¤¤ à¤ªà¤¾à¤°à¥à¤• à¤”à¤° à¤§à¤¾à¤°à¥à¤®à¤¿à¤• à¤µ à¤†à¤§à¥à¤¯à¤¾à¤¤à¥à¤®à¤¿à¤• à¤®à¤¾à¤¹à¥Œà¤²à¥¤</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon-wrapper"><i class="fa-solid fa-building-columns"></i></div>
                 <h4>80% Bank Loan Approved</h4>
-                <p>सभी प्रमुख राष्ट्रीयकृत बैंकों से 80% तक होम/प्लॉट लोन की आसान सुविधा उपलब्ध। आसान EMI ऑप्शंस।</p>
+                <p>à¤¸à¤­à¥€ à¤ªà¥à¤°à¤®à¥à¤– à¤°à¤¾à¤·à¥à¤Ÿà¥à¤°à¥€à¤¯à¤•à¥ƒà¤¤ à¤¬à¥ˆà¤‚à¤•à¥‹à¤‚ à¤¸à¥‡ 80% à¤¤à¤• à¤¹à¥‹à¤®/à¤ªà¥à¤²à¥‰à¤Ÿ à¤²à¥‹à¤¨ à¤•à¥€ à¤†à¤¸à¤¾à¤¨ à¤¸à¥à¤µà¤¿à¤§à¤¾ à¤‰à¤ªà¤²à¤¬à¥à¤§à¥¤ à¤†à¤¸à¤¾à¤¨ EMI à¤‘à¤ªà¥à¤¶à¤‚à¤¸à¥¤</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon-wrapper"><i class="fa-solid fa-store"></i></div>
                 <h4>Commercial Plots & Shops</h4>
-                <p>रेजिडेंशियल प्लॉट्स के साथ-साथ बिजनेस एवं हाई-रिटर्न इन्वेस्टमेंट के लिए कमर्शियल प्लॉट्स व दुकानों का विकल्प।</p>
+                <p>à¤°à¥‡à¤œà¤¿à¤¡à¥‡à¤‚à¤¶à¤¿à¤¯à¤² à¤ªà¥à¤²à¥‰à¤Ÿà¥à¤¸ à¤•à¥‡ à¤¸à¤¾à¤¥-à¤¸à¤¾à¤¥ à¤¬à¤¿à¤œà¤¨à¥‡à¤¸ à¤à¤µà¤‚ à¤¹à¤¾à¤ˆ-à¤°à¤¿à¤Ÿà¤°à¥à¤¨ à¤‡à¤¨à¥à¤µà¥‡à¤¸à¥à¤Ÿà¤®à¥‡à¤‚à¤Ÿ à¤•à¥‡ à¤²à¤¿à¤ à¤•à¤®à¤°à¥à¤¶à¤¿à¤¯à¤² à¤ªà¥à¤²à¥‰à¤Ÿà¥à¤¸ à¤µ à¤¦à¥à¤•à¤¾à¤¨à¥‹à¤‚ à¤•à¤¾ à¤µà¤¿à¤•à¤²à¥à¤ªà¥¤</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon-wrapper"><i class="fa-solid fa-lock"></i></div>
                 <h4>24x7 Security & Boundary Wall</h4>
-                <p>पूरी टाउनशिप में चारों तरफ सुरक्षित बाउंड्री वॉल, सीसीटीवी कैमरे, भव्य गेटेड सिक्योरिटी एवं स्ट्रीट लाइट्स।</p>
+                <p>à¤ªà¥‚à¤°à¥€ à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª à¤®à¥‡à¤‚ à¤šà¤¾à¤°à¥‹à¤‚ à¤¤à¤°à¤« à¤¸à¥à¤°à¤•à¥à¤·à¤¿à¤¤ à¤¬à¤¾à¤‰à¤‚à¤¡à¥à¤°à¥€ à¤µà¥‰à¤², à¤¸à¥€à¤¸à¥€à¤Ÿà¥€à¤µà¥€ à¤•à¥ˆà¤®à¤°à¥‡, à¤­à¤µà¥à¤¯ à¤—à¥‡à¤Ÿà¥‡à¤¡ à¤¸à¤¿à¤•à¥à¤¯à¥‹à¤°à¤¿à¤Ÿà¥€ à¤à¤µà¤‚ à¤¸à¥à¤Ÿà¥à¤°à¥€à¤Ÿ à¤²à¤¾à¤‡à¤Ÿà¥à¤¸à¥¤</p>
             </div>
         </div>
     </section>
@@ -1092,29 +1193,29 @@
     <section class="section theme-section" id="theme">
         <div class="section-header">
             <span class="section-subtitle" style="color: var(--accent);">SPIRITUAL & MODERN LIVING</span>
-            <h2 class="section-title">श्री राम मंदिर एवं रामायण थीम डेवलपमेंट</h2>
+            <h2 class="section-title">à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤®à¤‚à¤¦à¤¿à¤° à¤à¤µà¤‚ à¤°à¤¾à¤®à¤¾à¤¯à¤£ à¤¥à¥€à¤® à¤¡à¥‡à¤µà¤²à¤ªà¤®à¥‡à¤‚à¤Ÿ</h2>
         </div>
 
         <div class="theme-grid">
             <div class="theme-card">
                 <div class="theme-card-icon"><i class="fa-solid fa-gopuram"></i></div>
-                <h4>श्री राम भव्य मंदिर</h4>
-                <p>टाउनशिप के केंद्र में विशाल श्री राम मंदिर परिसर एवं आध्यात्मिक शांति का वातावरण</p>
+                <h4>à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤­à¤µà¥à¤¯ à¤®à¤‚à¤¦à¤¿à¤°</h4>
+                <p>à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª à¤•à¥‡ à¤•à¥‡à¤‚à¤¦à¥à¤° à¤®à¥‡à¤‚ à¤µà¤¿à¤¶à¤¾à¤² à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤®à¤‚à¤¦à¤¿à¤° à¤ªà¤°à¤¿à¤¸à¤° à¤à¤µà¤‚ à¤†à¤§à¥à¤¯à¤¾à¤¤à¥à¤®à¤¿à¤• à¤¶à¤¾à¤‚à¤¤à¤¿ à¤•à¤¾ à¤µà¤¾à¤¤à¤¾à¤µà¤°à¤£</p>
             </div>
             <div class="theme-card">
                 <div class="theme-card-icon"><i class="fa-solid fa-hands-praying"></i></div>
-                <h4>हनुमान जी मंदिर</h4>
-                <p>समर्पित हनुमान मंदिर एवं नित्य आरती व धार्मिक आयोजनों की व्यवस्था</p>
+                <h4>à¤¹à¤¨à¥à¤®à¤¾à¤¨ à¤œà¥€ à¤®à¤‚à¤¦à¤¿à¤°</h4>
+                <p>à¤¸à¤®à¤°à¥à¤ªà¤¿à¤¤ à¤¹à¤¨à¥à¤®à¤¾à¤¨ à¤®à¤‚à¤¦à¤¿à¤° à¤à¤µà¤‚ à¤¨à¤¿à¤¤à¥à¤¯ à¤†à¤°à¤¤à¥€ à¤µ à¤§à¤¾à¤°à¥à¤®à¤¿à¤• à¤†à¤¯à¥‹à¤œà¤¨à¥‹à¤‚ à¤•à¥€ à¤µà¥à¤¯à¤µà¤¸à¥à¤¥à¤¾</p>
             </div>
             <div class="theme-card">
                 <div class="theme-card-icon"><i class="fa-solid fa-spa"></i></div>
-                <h4>रामायण थीम गार्डन</h4>
-                <p>विशेष थीम आधारित सुन्दर उपवन, लैंडस्केप्ड पार्क्स और वाकिंग ट्रैक्स</p>
+                <h4>à¤°à¤¾à¤®à¤¾à¤¯à¤£ à¤¥à¥€à¤® à¤—à¤¾à¤°à¥à¤¡à¤¨</h4>
+                <p>à¤µà¤¿à¤¶à¥‡à¤· à¤¥à¥€à¤® à¤†à¤§à¤¾à¤°à¤¿à¤¤ à¤¸à¥à¤¨à¥à¤¦à¤° à¤‰à¤ªà¤µà¤¨, à¤²à¥ˆà¤‚à¤¡à¤¸à¥à¤•à¥‡à¤ªà¥à¤¡ à¤ªà¤¾à¤°à¥à¤•à¥à¤¸ à¤”à¤° à¤µà¤¾à¤•à¤¿à¤‚à¤— à¤Ÿà¥à¤°à¥ˆà¤•à¥à¤¸</p>
             </div>
             <div class="theme-card">
                 <div class="theme-card-icon"><i class="fa-solid fa-people-roof"></i></div>
-                <h4>कम्युनिटी & क्लब हाउस</h4>
-                <p>रेजिडेंट्स के लिए आधुनिक क्लब हाउस, रीक्रिएशनल फैसिलिटीज और चिल्ड्रेन प्ले एरिया</p>
+                <h4>à¤•à¤®à¥à¤¯à¥à¤¨à¤¿à¤Ÿà¥€ & à¤•à¥à¤²à¤¬ à¤¹à¤¾à¤‰à¤¸</h4>
+                <p>à¤°à¥‡à¤œà¤¿à¤¡à¥‡à¤‚à¤Ÿà¥à¤¸ à¤•à¥‡ à¤²à¤¿à¤ à¤†à¤§à¥à¤¨à¤¿à¤• à¤•à¥à¤²à¤¬ à¤¹à¤¾à¤‰à¤¸, à¤°à¥€à¤•à¥à¤°à¤¿à¤à¤¶à¤¨à¤² à¤«à¥ˆà¤¸à¤¿à¤²à¤¿à¤Ÿà¥€à¤œ à¤”à¤° à¤šà¤¿à¤²à¥à¤¡à¥à¤°à¥‡à¤¨ à¤ªà¥à¤²à¥‡ à¤à¤°à¤¿à¤¯à¤¾</p>
             </div>
         </div>
     </section>
@@ -1123,9 +1224,9 @@
     <section class="section" id="videos" style="background: #F1F5F9;">
         <div class="section-header">
             <span class="section-subtitle"><i class="fa-solid fa-circle-play" style="color: var(--secondary);"></i> LIVE SITE & TOUR VIDEOS</span>
-            <h2 class="section-title">श्री राम आंगण - प्रोजेक्ट वीडियो टूर & वाकथ्रू</h2>
+            <h2 class="section-title">à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤†à¤‚à¤—à¤£ - à¤ªà¥à¤°à¥‹à¤œà¥‡à¤•à¥à¤Ÿ à¤µà¥€à¤¡à¤¿à¤¯à¥‹ à¤Ÿà¥‚à¤° & à¤µà¤¾à¤•à¤¥à¥à¤°à¥‚</h2>
             <p style="color: var(--text-muted); max-width: 750px; margin: 12px auto 0 auto; font-size: 1rem; line-height: 1.6;">
-                136 बीघा में हो रहे वास्तविक विकास (Site Development), 200 Feet टोंक रोड कनेक्टिविटी एवं श्री राम मंदिर परिसर की गूगल ड्राइव वीडियो झलकियाँ देखें।
+                136 à¤¬à¥€à¤˜à¤¾ à¤®à¥‡à¤‚ à¤¹à¥‹ à¤°à¤¹à¥‡ à¤µà¤¾à¤¸à¥à¤¤à¤µà¤¿à¤• à¤µà¤¿à¤•à¤¾à¤¸ (Site Development), 200 Feet à¤Ÿà¥‹à¤‚à¤• à¤°à¥‹à¤¡ à¤•à¤¨à¥‡à¤•à¥à¤Ÿà¤¿à¤µà¤¿à¤Ÿà¥€ à¤à¤µà¤‚ à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤®à¤‚à¤¦à¤¿à¤° à¤ªà¤°à¤¿à¤¸à¤° à¤•à¥€ à¤—à¥‚à¤—à¤² à¤¡à¥à¤°à¤¾à¤‡à¤µ à¤µà¥€à¤¡à¤¿à¤¯à¥‹ à¤à¤²à¤•à¤¿à¤¯à¤¾à¤ à¤¦à¥‡à¤–à¥‡à¤‚à¥¤
             </p>
         </div>
 
@@ -1134,20 +1235,20 @@
             <div class="video-card">
                 <div class="video-thumb-container">
                     <div class="video-badge"><i class="fa-brands fa-google-drive"></i> Drive Video</div>
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="136 बीघा टाउनशिप ड्रोन वीडियो" class="video-thumb">
-                    <a href="https://drive.google.com/drive/folders/1JnBa2v6-WU1MYMQCnmVU7rDEd79eebXD" target="_blank" class="play-overlay-btn" title="Watch Video on Google Drive">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="136 à¤¬à¥€à¤˜à¤¾ à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª à¤¡à¥à¤°à¥‹à¤¨ à¤µà¥€à¤¡à¤¿à¤¯à¥‹" class="video-thumb">
+                    <button class="play-overlay-btn" onclick="openVideoModal('136 à¤¬à¥€à¤˜à¤¾ à¤¸à¤¾à¤‡à¤Ÿ à¤¡à¥‡à¤µà¤²à¤ªà¤®à¥‡à¤‚à¤Ÿ à¤¡à¥à¤°à¥‹à¤¨ à¤µà¥€à¤¡à¤¿à¤¯à¥‹', 'https://drive.google.com/drive/folders/1JnBa2v6-WU1MYMQCnmVU7rDEd79eebXD', 'https://drive.google.com/drive/folders/1JnBa2v6-WU1MYMQCnmVU7rDEd79eebXD')" title="Play Site Development Video">
                         <i class="fa-solid fa-play"></i>
-                    </a>
+                    </button>
                 </div>
                 <div class="video-card-body">
-                    <h4><i class="fa-solid fa-video" style="color: var(--primary);"></i> 136 बीघा साइट डेवलपमेंट वीडियो</h4>
-                    <p>प्रोजेक्ट की 136 बीघा जमीन, बाउंड्री वॉल, डिमार्केशन एवं ऑन-साइट डेवलपमेंट का ड्रोन/साइट वॉच वीडियो।</p>
+                    <h4><i class="fa-solid fa-video" style="color: var(--primary);"></i> 136 à¤¬à¥€à¤˜à¤¾ à¤¸à¤¾à¤‡à¤Ÿ à¤¡à¥‡à¤µà¤²à¤ªà¤®à¥‡à¤‚à¤Ÿ à¤µà¥€à¤¡à¤¿à¤¯à¥‹</h4>
+                    <p>à¤ªà¥à¤°à¥‹à¤œà¥‡à¤•à¥à¤Ÿ à¤•à¥€ 136 à¤¬à¥€à¤˜à¤¾ à¤œà¤®à¥€à¤¨, à¤¬à¤¾à¤‰à¤‚à¤¡à¥à¤°à¥€ à¤µà¥‰à¤², à¤¡à¤¿à¤®à¤¾à¤°à¥à¤•à¥‡à¤¶à¤¨ à¤à¤µà¤‚ à¤‘à¤¨-à¤¸à¤¾à¤‡à¤Ÿ à¤¡à¥‡à¤µà¤²à¤ªà¤®à¥‡à¤‚à¤Ÿ à¤•à¤¾ à¤¡à¥à¤°à¥‹à¤¨/à¤¸à¤¾à¤‡à¤Ÿ à¤µà¥€à¤¡à¤¿à¤¯à¥‹à¥¤</p>
                     <div class="video-card-actions">
-                        <a href="https://drive.google.com/drive/folders/1JnBa2v6-WU1MYMQCnmVU7rDEd79eebXD" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 8px 16px; flex: 1;">
-                            <i class="fa-brands fa-google-drive"></i> Watch on Drive
-                        </a>
-                        <a href="https://wa.me/918739904737?text=Namaste!%20Mujhe%20Shree%20Ram%20Aangan%20ka%20Site%20Development%20Video%20chahiye." target="_blank" class="btn btn-whatsapp" style="font-size: 0.85rem; padding: 8px 16px;">
-                            <i class="fa-brands fa-whatsapp"></i> Get Video
+                        <button onclick="openVideoModal('136 à¤¬à¥€à¤˜à¤¾ à¤¸à¤¾à¤‡à¤Ÿ à¤¡à¥‡à¤µà¤²à¤ªà¤®à¥‡à¤‚à¤Ÿ à¤¡à¥à¤°à¥‹à¤¨ à¤µà¥€à¤¡à¤¿à¤¯à¥‹', 'https://drive.google.com/drive/folders/1JnBa2v6-WU1MYMQCnmVU7rDEd79eebXD', 'https://drive.google.com/drive/folders/1JnBa2v6-WU1MYMQCnmVU7rDEd79eebXD')" class="btn btn-primary" style="font-size: 0.85rem; padding: 10px 14px; flex: 1;">
+                            <i class="fa-solid fa-circle-play"></i> Watch Video
+                        </button>
+                        <a href="https://drive.google.com/drive/folders/1JnBa2v6-WU1MYMQCnmVU7rDEd79eebXD" target="_blank" class="btn btn-call" style="font-size: 0.85rem; padding: 10px 14px;" title="Open Google Drive Folder">
+                            <i class="fa-brands fa-google-drive"></i> Drive
                         </a>
                     </div>
                 </div>
@@ -1157,20 +1258,20 @@
             <div class="video-card">
                 <div class="video-thumb-container">
                     <div class="video-badge"><i class="fa-brands fa-google-drive"></i> Drive Video</div>
-                    <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80" alt="श्री राम मंदिर परिसर वीडियो" class="video-thumb">
-                    <a href="https://drive.google.com/drive/folders/1qwlCGbyELfaFuin6HP7v-witnbvsuP1V" target="_blank" class="play-overlay-btn" title="Watch Video on Google Drive">
+                    <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80" alt="à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤®à¤‚à¤¦à¤¿à¤° à¤ªà¤°à¤¿à¤¸à¤° à¤µà¥€à¤¡à¤¿à¤¯à¥‹" class="video-thumb">
+                    <button class="play-overlay-btn" onclick="openVideoModal('à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤®à¤‚à¤¦à¤¿à¤° & à¤°à¤¾à¤®à¤¾à¤¯à¤£ à¤¥à¥€à¤® à¤ªà¤¾à¤°à¥à¤• à¤Ÿà¥‚à¤°', 'https://drive.google.com/drive/folders/1qwlCGbyELfaFuin6HP7v-witnbvsuP1V', 'https://drive.google.com/drive/folders/1qwlCGbyELfaFuin6HP7v-witnbvsuP1V')" title="Play Temple Tour Video">
                         <i class="fa-solid fa-play"></i>
-                    </a>
+                    </button>
                 </div>
                 <div class="video-card-body">
-                    <h4><i class="fa-solid fa-gopuram" style="color: var(--secondary);"></i> श्री राम मंदिर & रामायण पार्क टूर</h4>
-                    <p>टाउनशिप में निर्मित हो रहे भव्य श्री राम मंदिर परिसर, हनुमान जी मंदिर एवं रामायण पार्क का वॉकथ्रू वीडियो।</p>
+                    <h4><i class="fa-solid fa-gopuram" style="color: var(--secondary);"></i> à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤®à¤‚à¤¦à¤¿à¤° & à¤°à¤¾à¤®à¤¾à¤¯à¤£ à¤ªà¤¾à¤°à¥à¤• à¤Ÿà¥‚à¤°</h4>
+                    <p>à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª à¤®à¥‡à¤‚ à¤¨à¤¿à¤°à¥à¤®à¤¿à¤¤ à¤¹à¥‹ à¤°à¤¹à¥‡ à¤­à¤µà¥à¤¯ à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤®à¤‚à¤¦à¤¿à¤° à¤ªà¤°à¤¿à¤¸à¤°, à¤¹à¤¨à¥à¤®à¤¾à¤¨ à¤œà¥€ à¤®à¤‚à¤¦à¤¿à¤° à¤à¤µà¤‚ à¤°à¤¾à¤®à¤¾à¤¯à¤£ à¤ªà¤¾à¤°à¥à¤• à¤•à¤¾ à¤µà¥‰à¤•à¤¥à¥à¤°à¥‚ à¤µà¥€à¤¡à¤¿à¤¯à¥‹à¥¤</p>
                     <div class="video-card-actions">
-                        <a href="https://drive.google.com/drive/folders/1qwlCGbyELfaFuin6HP7v-witnbvsuP1V" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 8px 16px; flex: 1;">
-                            <i class="fa-brands fa-google-drive"></i> Watch on Drive
-                        </a>
-                        <a href="https://wa.me/918739904737?text=Namaste!%20Mujhe%20Ram%20Mandir%20Theme%20Park%20ka%20Video%20chahiye." target="_blank" class="btn btn-whatsapp" style="font-size: 0.85rem; padding: 8px 16px;">
-                            <i class="fa-brands fa-whatsapp"></i> Get Video
+                        <button onclick="openVideoModal('à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤®à¤‚à¤¦à¤¿à¤° & à¤°à¤¾à¤®à¤¾à¤¯à¤£ à¤¥à¥€à¤® à¤ªà¤¾à¤°à¥à¤• à¤Ÿà¥‚à¤°', 'https://drive.google.com/drive/folders/1qwlCGbyELfaFuin6HP7v-witnbvsuP1V', 'https://drive.google.com/drive/folders/1qwlCGbyELfaFuin6HP7v-witnbvsuP1V')" class="btn btn-primary" style="font-size: 0.85rem; padding: 10px 14px; flex: 1;">
+                            <i class="fa-solid fa-circle-play"></i> Watch Video
+                        </button>
+                        <a href="https://drive.google.com/drive/folders/1qwlCGbyELfaFuin6HP7v-witnbvsuP1V" target="_blank" class="btn btn-call" style="font-size: 0.85rem; padding: 10px 14px;" title="Open Google Drive Folder">
+                            <i class="fa-brands fa-google-drive"></i> Drive
                         </a>
                     </div>
                 </div>
@@ -1180,20 +1281,20 @@
             <div class="video-card">
                 <div class="video-thumb-container">
                     <div class="video-badge"><i class="fa-brands fa-google-drive"></i> Drive Video</div>
-                    <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80" alt="200 Feet टोंक रोड एंट्रेंस वीडियो" class="video-thumb">
-                    <a href="https://drive.google.com/drive/folders/1JrIJ9G2eQvyX3-6x3zm0bMYCLyDQ_vCt" target="_blank" class="play-overlay-btn" title="Watch Video on Google Drive">
+                    <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80" alt="200 Feet à¤Ÿà¥‹à¤‚à¤• à¤°à¥‹à¤¡ à¤à¤‚à¤Ÿà¥à¤°à¥‡à¤‚à¤¸ à¤µà¥€à¤¡à¤¿à¤¯à¥‹" class="video-thumb">
+                    <button class="play-overlay-btn" onclick="openVideoModal('200 Feet à¤Ÿà¥‹à¤‚à¤• à¤°à¥‹à¤¡ & 150 Feet à¤®à¥à¤–à¥à¤¯ à¤¦à¥à¤µà¤¾à¤° à¤µà¥€à¤¡à¤¿à¤¯à¥‹', 'https://drive.google.com/drive/folders/1JrIJ9G2eQvyX3-6x3zm0bMYCLyDQ_vCt', 'https://drive.google.com/drive/folders/1JrIJ9G2eQvyX3-6x3zm0bMYCLyDQ_vCt')" title="Play Tonk Road Video">
                         <i class="fa-solid fa-play"></i>
-                    </a>
+                    </button>
                 </div>
                 <div class="video-card-body">
-                    <h4><i class="fa-solid fa-road" style="color: var(--call);"></i> 200 Ft टोंक रोड & 150 Ft मुख्य द्वार</h4>
-                    <p>नेशनल हाइवे टोंक रोड से 200 फीट चौड़ी रोड कनेक्टिविटी एवं 150 फीट चौड़े भव्य प्रवेश द्वार का साइट वीडियो।</p>
+                    <h4><i class="fa-solid fa-road" style="color: var(--call);"></i> 200 Ft à¤Ÿà¥‹à¤‚à¤• à¤°à¥‹à¤¡ & 150 Ft à¤®à¥à¤–à¥à¤¯ à¤¦à¥à¤µà¤¾à¤°</h4>
+                    <p>à¤¨à¥‡à¤¶à¤¨à¤² à¤¹à¤¾à¤‡à¤µà¥‡ à¤Ÿà¥‹à¤‚à¤• à¤°à¥‹à¤¡ à¤¸à¥‡ 200 à¤«à¥€à¤Ÿ à¤šà¥Œà¤¡à¤¼à¥€ à¤°à¥‹à¤¡ à¤•à¤¨à¥‡à¤•à¥à¤Ÿà¤¿à¤µà¤¿à¤Ÿà¥€ à¤à¤µà¤‚ 150 à¤«à¥€à¤Ÿ à¤šà¥Œà¤¡à¤¼à¥‡ à¤­à¤µà¥à¤¯ à¤ªà¥à¤°à¤µà¥‡à¤¶ à¤¦à¥à¤µà¤¾à¤° à¤•à¤¾ à¤¸à¤¾à¤‡à¤Ÿ à¤µà¥€à¤¡à¤¿à¤¯à¥‹à¥¤</p>
                     <div class="video-card-actions">
-                        <a href="https://drive.google.com/drive/folders/1JrIJ9G2eQvyX3-6x3zm0bMYCLyDQ_vCt" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 8px 16px; flex: 1;">
-                            <i class="fa-brands fa-google-drive"></i> Watch on Drive
-                        </a>
-                        <a href="https://wa.me/918739904737?text=Namaste!%20Mujhe%20200ft%20Tonk%20Road%20Connectivity%20Video%20chahiye." target="_blank" class="btn btn-whatsapp" style="font-size: 0.85rem; padding: 8px 16px;">
-                            <i class="fa-brands fa-whatsapp"></i> Get Video
+                        <button onclick="openVideoModal('200 Feet à¤Ÿà¥‹à¤‚à¤• à¤°à¥‹à¤¡ & 150 Feet à¤®à¥à¤–à¥à¤¯ à¤¦à¥à¤µà¤¾à¤° à¤µà¥€à¤¡à¤¿à¤¯à¥‹', 'https://drive.google.com/drive/folders/1JrIJ9G2eQvyX3-6x3zm0bMYCLyDQ_vCt', 'https://drive.google.com/drive/folders/1JrIJ9G2eQvyX3-6x3zm0bMYCLyDQ_vCt')" class="btn btn-primary" style="font-size: 0.85rem; padding: 10px 14px; flex: 1;">
+                            <i class="fa-solid fa-circle-play"></i> Watch Video
+                        </button>
+                        <a href="https://drive.google.com/drive/folders/1JrIJ9G2eQvyX3-6x3zm0bMYCLyDQ_vCt" target="_blank" class="btn btn-call" style="font-size: 0.85rem; padding: 10px 14px;" title="Open Google Drive Folder">
+                            <i class="fa-brands fa-google-drive"></i> Drive
                         </a>
                     </div>
                 </div>
@@ -1205,13 +1306,13 @@
     <section class="section" id="site-visit">
         <div class="site-visit-cta">
             <div class="cta-content">
-                <h2>🚗 Free Weekend Site Visit Book करें!</h2>
-                <p>फोन पर समझने के बजाय एक बार स्वयं साइट पर जाकर 136 बीघा का डेवलपमेंट, लोकेशन और उपलब्ध प्लॉट्स देखें। पिक एंड ड्रॉप पिकअप कैब की सुविधा उपलब्ध!</p>
+                <h2>ðŸš— Free Weekend Site Visit Book à¤•à¤°à¥‡à¤‚!</h2>
+                <p>à¤«à¥‹à¤¨ à¤ªà¤° à¤¸à¤®à¤à¤¨à¥‡ à¤•à¥‡ à¤¬à¤œà¤¾à¤¯ à¤à¤• à¤¬à¤¾à¤° à¤¸à¥à¤µà¤¯à¤‚ à¤¸à¤¾à¤‡à¤Ÿ à¤ªà¤° à¤œà¤¾à¤•à¤° 136 à¤¬à¥€à¤˜à¤¾ à¤•à¤¾ à¤¡à¥‡à¤µà¤²à¤ªà¤®à¥‡à¤‚à¤Ÿ, à¤²à¥‹à¤•à¥‡à¤¶à¤¨ à¤”à¤° à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤ªà¥à¤²à¥‰à¤Ÿà¥à¤¸ à¤¦à¥‡à¤–à¥‡à¤‚à¥¤ à¤ªà¤¿à¤• à¤à¤‚à¤¡ à¤¡à¥à¤°à¥‰à¤ª à¤ªà¤¿à¤•à¤…à¤ª à¤•à¥ˆà¤¬ à¤•à¥€ à¤¸à¥à¤µà¤¿à¤§à¤¾ à¤‰à¤ªà¤²à¤¬à¥à¤§!</p>
                 
                 <ul class="cta-features">
-                    <li><i class="fa-solid fa-circle-check"></i> जयपुर शहर से निःशुल्क पिक-अप एवं ड्रॉप कैब सुविधा</li>
-                    <li><i class="fa-solid fa-circle-check"></i> शनिवार एवं रविवार को स्पेशल फैमिली साइट विजिट गाइड</li>
-                    <li><i class="fa-solid fa-circle-check"></i> ऑन-साइट मैप लेआउट और प्लॉट सिलेक्शन सहायता</li>
+                    <li><i class="fa-solid fa-circle-check"></i> à¤œà¤¯à¤ªà¥à¤° à¤¶à¤¹à¤° à¤¸à¥‡ à¤¨à¤¿à¤ƒà¤¶à¥à¤²à¥à¤• à¤ªà¤¿à¤•-à¤…à¤ª à¤à¤µà¤‚ à¤¡à¥à¤°à¥‰à¤ª à¤•à¥ˆà¤¬ à¤¸à¥à¤µà¤¿à¤§à¤¾</li>
+                    <li><i class="fa-solid fa-circle-check"></i> à¤¶à¤¨à¤¿à¤µà¤¾à¤° à¤à¤µà¤‚ à¤°à¤µà¤¿à¤µà¤¾à¤° à¤•à¥‹ à¤¸à¥à¤ªà¥‡à¤¶à¤² à¤«à¥ˆà¤®à¤¿à¤²à¥€ à¤¸à¤¾à¤‡à¤Ÿ à¤µà¤¿à¤œà¤¿à¤Ÿ à¤—à¤¾à¤‡à¤¡</li>
+                    <li><i class="fa-solid fa-circle-check"></i> à¤‘à¤¨-à¤¸à¤¾à¤‡à¤Ÿ à¤®à¥ˆà¤ª à¤²à¥‡à¤†à¤‰à¤Ÿ à¤”à¤° à¤ªà¥à¤²à¥‰à¤Ÿ à¤¸à¤¿à¤²à¥‡à¤•à¥à¤¶à¤¨ à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾</li>
                 </ul>
 
                 <a href="https://wa.me/918739904737?text=Namaste!%20Main%20Shree%20Ram%20Aangan%20Township%20ki%20Free%20Site%20Visit%20book%20karna%20chahta%20hoon." target="_blank" class="btn btn-whatsapp" style="padding: 16px 32px; font-size: 1.1rem;">
@@ -1220,22 +1321,22 @@
             </div>
 
             <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.2);">
-                <h3 style="margin-bottom: 20px; font-size: 1.3rem;"><i class="fa-solid fa-calendar-days" style="color: var(--accent);"></i> फ्री साइट विजिट पिकअप फॉर्म</h3>
+                <h3 style="margin-bottom: 20px; font-size: 1.3rem;"><i class="fa-solid fa-calendar-days" style="color: var(--accent);"></i> à¤«à¥à¤°à¥€ à¤¸à¤¾à¤‡à¤Ÿ à¤µà¤¿à¤œà¤¿à¤Ÿ à¤ªà¤¿à¤•à¤…à¤ª à¤«à¥‰à¤°à¥à¤®</h3>
                 <form id="visitForm" onsubmit="submitVisitForm(event)">
                     <div class="form-group">
-                        <label style="color: #FFF;">नाम (Name)</label>
-                        <input type="text" class="form-input" id="vName" placeholder="आपका नाम" required>
+                        <label style="color: #FFF;">à¤¨à¤¾à¤® (Name)</label>
+                        <input type="text" class="form-input" id="vName" placeholder="à¤†à¤ªà¤•à¤¾ à¤¨à¤¾à¤®" required>
                     </div>
                     <div class="form-group">
-                        <label style="color: #FFF;">फोन नंबर (Mobile Number)</label>
-                        <input type="tel" class="form-input" id="vPhone" placeholder="10-अंकों का नंबर" pattern="[0-9]{10}" required>
+                        <label style="color: #FFF;">à¤«à¥‹à¤¨ à¤¨à¤‚à¤¬à¤° (Mobile Number)</label>
+                        <input type="tel" class="form-input" id="vPhone" placeholder="10-à¤…à¤‚à¤•à¥‹à¤‚ à¤•à¤¾ à¤¨à¤‚à¤¬à¤°" pattern="[0-9]{10}" required>
                     </div>
                     <div class="form-group">
-                        <label style="color: #FFF;">पसंद का दिन (Preferred Day)</label>
+                        <label style="color: #FFF;">à¤ªà¤¸à¤‚à¤¦ à¤•à¤¾ à¤¦à¤¿à¤¨ (Preferred Day)</label>
                         <select class="form-input" id="vDay">
-                            <option value="Saturday">शनिवार (Saturday)</option>
-                            <option value="Sunday">रविवार (Sunday)</option>
-                            <option value="Weekday">सप्ताह के किसी अन्य दिन</option>
+                            <option value="Saturday">à¤¶à¤¨à¤¿à¤µà¤¾à¤° (Saturday)</option>
+                            <option value="Sunday">à¤°à¤µà¤¿à¤µà¤¾à¤° (Sunday)</option>
+                            <option value="Weekday">à¤¸à¤ªà¥à¤¤à¤¾à¤¹ à¤•à¥‡ à¤•à¤¿à¤¸à¥€ à¤…à¤¨à¥à¤¯ à¤¦à¤¿à¤¨</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary form-submit" style="background: var(--accent); color: var(--dark); font-weight: 700;">
@@ -1250,57 +1351,57 @@
     <section class="section" id="faq" style="background: #F8FAFC;">
         <div class="section-header">
             <span class="section-subtitle">FREQUENTLY ASKED QUESTIONS</span>
-            <h2 class="section-title">अक्सर पूछे जाने वाले सवाल (FAQs)</h2>
+            <h2 class="section-title">à¤…à¤•à¥à¤¸à¤° à¤ªà¥‚à¤›à¥‡ à¤œà¤¾à¤¨à¥‡ à¤µà¤¾à¤²à¥‡ à¤¸à¤µà¤¾à¤² (FAQs)</h2>
         </div>
 
         <div class="faq-container">
             <div class="faq-item active">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    1. क्या यह प्रोजेक्ट RERA एवं JDA से अप्रूव्ड है?
+                    1. à¤•à¥à¤¯à¤¾ à¤¯à¤¹ à¤ªà¥à¤°à¥‹à¤œà¥‡à¤•à¥à¤Ÿ RERA à¤à¤µà¤‚ JDA à¤¸à¥‡ à¤…à¤ªà¥à¤°à¥‚à¤µà¥à¤¡ à¤¹à¥ˆ?
                     <i class="fa-solid fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer">
-                    जी हाँ! श्री राम आंगण टाउनशिप राजस्थान RERA द्वारा पंजीकृत प्रोजेक्ट है (RERA Registration Number: RAJ/P/2026/4660)। आप इसे राजस्थान रेरा की आधिकारिक वेबसाइट पर भी ऑनलाइन सत्यापित कर सकते हैं।
+                    à¤œà¥€ à¤¹à¤¾à¤! à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤†à¤‚à¤—à¤£ à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª à¤°à¤¾à¤œà¤¸à¥à¤¥à¤¾à¤¨ RERA à¤¦à¥à¤µà¤¾à¤°à¤¾ à¤ªà¤‚à¤œà¥€à¤•à¥ƒà¤¤ à¤ªà¥à¤°à¥‹à¤œà¥‡à¤•à¥à¤Ÿ à¤¹à¥ˆ (RERA Registration Number: RAJ/P/2026/4660)à¥¤ à¤†à¤ª à¤‡à¤¸à¥‡ à¤°à¤¾à¤œà¤¸à¥à¤¥à¤¾à¤¨ à¤°à¥‡à¤°à¤¾ à¤•à¥€ à¤†à¤§à¤¿à¤•à¤¾à¤°à¤¿à¤• à¤µà¥‡à¤¬à¤¸à¤¾à¤‡à¤Ÿ à¤ªà¤° à¤­à¥€ à¤‘à¤¨à¤²à¤¾à¤‡à¤¨ à¤¸à¤¤à¥à¤¯à¤¾à¤ªà¤¿à¤¤ à¤•à¤° à¤¸à¤•à¤¤à¥‡ à¤¹à¥ˆà¤‚à¥¤
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    2. टाउनशिप की लोकेशन क्या है और सड़क कनेक्टिविटी कैसी है?
+                    2. à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª à¤•à¥€ à¤²à¥‹à¤•à¥‡à¤¶à¤¨ à¤•à¥à¤¯à¤¾ à¤¹à¥ˆ à¤”à¤° à¤¸à¤¡à¤¼à¤• à¤•à¤¨à¥‡à¤•à¥à¤Ÿà¤¿à¤µà¤¿à¤Ÿà¥€ à¤•à¥ˆà¤¸à¥€ à¤¹à¥ˆ?
                     <i class="fa-solid fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer">
-                    प्रोजेक्ट टोंक रोड, चाकसू (जयपुर) में स्थित है। इसे 200 फीट चौड़े नेशनल हाइवे टोंक रोड, 45 मीटर मास्टर प्लान रोड और 150 फीट चौड़े विशाल मुख्य प्रवेश द्वार से डायरेक्ट कनेक्टिविटी दी गई है।
+                    à¤ªà¥à¤°à¥‹à¤œà¥‡à¤•à¥à¤Ÿ à¤Ÿà¥‹à¤‚à¤• à¤°à¥‹à¤¡, à¤šà¤¾à¤•à¤¸à¥‚ (à¤œà¤¯à¤ªà¥à¤°) à¤®à¥‡à¤‚ à¤¸à¥à¤¥à¤¿à¤¤ à¤¹à¥ˆà¥¤ à¤‡à¤¸à¥‡ 200 à¤«à¥€à¤Ÿ à¤šà¥Œà¤¡à¤¼à¥‡ à¤¨à¥‡à¤¶à¤¨à¤² à¤¹à¤¾à¤‡à¤µà¥‡ à¤Ÿà¥‹à¤‚à¤• à¤°à¥‹à¤¡, 45 à¤®à¥€à¤Ÿà¤° à¤®à¤¾à¤¸à¥à¤Ÿà¤° à¤ªà¥à¤²à¤¾à¤¨ à¤°à¥‹à¤¡ à¤”à¤° 150 à¤«à¥€à¤Ÿ à¤šà¥Œà¤¡à¤¼à¥‡ à¤µà¤¿à¤¶à¤¾à¤² à¤®à¥à¤–à¥à¤¯ à¤ªà¥à¤°à¤µà¥‡à¤¶ à¤¦à¥à¤µà¤¾à¤° à¤¸à¥‡ à¤¡à¤¾à¤¯à¤°à¥‡à¤•à¥à¤Ÿ à¤•à¤¨à¥‡à¤•à¥à¤Ÿà¤¿à¤µà¤¿à¤Ÿà¥€ à¤¦à¥€ à¤—à¤ˆ à¤¹à¥ˆà¥¤
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    3. क्या इस प्लॉट पर बैंक लोन की सुविधा उपलब्ध है?
+                    3. à¤•à¥à¤¯à¤¾ à¤‡à¤¸ à¤ªà¥à¤²à¥‰à¤Ÿ à¤ªà¤° à¤¬à¥ˆà¤‚à¤• à¤²à¥‹à¤¨ à¤•à¥€ à¤¸à¥à¤µà¤¿à¤§à¤¾ à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤¹à¥ˆ?
                     <i class="fa-solid fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer">
-                    जी हाँ! राष्ट्रीयकृत एवं प्रमुख प्राइवेट बैंकों द्वारा 80% तक बैंक लोन स्वीकृत (Approved) है। हमारी टीम आपको लोन प्रक्रिया में पूरी सहायता प्रदान करेगी।
+                    à¤œà¥€ à¤¹à¤¾à¤! à¤°à¤¾à¤·à¥à¤Ÿà¥à¤°à¥€à¤¯à¤•à¥ƒà¤¤ à¤à¤µà¤‚ à¤ªà¥à¤°à¤®à¥à¤– à¤ªà¥à¤°à¤¾à¤‡à¤µà¥‡à¤Ÿ à¤¬à¥ˆà¤‚à¤•à¥‹à¤‚ à¤¦à¥à¤µà¤¾à¤°à¤¾ 80% à¤¤à¤• à¤¬à¥ˆà¤‚à¤• à¤²à¥‹à¤¨ à¤¸à¥à¤µà¥€à¤•à¥ƒà¤¤ (Approved) à¤¹à¥ˆà¥¤ à¤¹à¤®à¤¾à¤°à¥€ à¤Ÿà¥€à¤® à¤†à¤ªà¤•à¥‹ à¤²à¥‹à¤¨ à¤ªà¥à¤°à¤•à¥à¤°à¤¿à¤¯à¤¾ à¤®à¥‡à¤‚ à¤ªà¥‚à¤°à¥€ à¤¸à¤¹à¤¾à¤¯à¤¤à¤¾ à¤ªà¥à¤°à¤¦à¤¾à¤¨ à¤•à¤°à¥‡à¤—à¥€à¥¤
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    4. यहाँ किस साइज के रेजिडेंशियल व कमर्शियल प्लॉट्स उपलब्ध हैं?
+                    4. à¤¯à¤¹à¤¾à¤ à¤•à¤¿à¤¸ à¤¸à¤¾à¤‡à¤œ à¤•à¥‡ à¤°à¥‡à¤œà¤¿à¤¡à¥‡à¤‚à¤¶à¤¿à¤¯à¤² à¤µ à¤•à¤®à¤°à¥à¤¶à¤¿à¤¯à¤² à¤ªà¥à¤²à¥‰à¤Ÿà¥à¤¸ à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤¹à¥ˆà¤‚?
                     <i class="fa-solid fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer">
-                    यहाँ 100 वर्ग गज से लेकर 250+ वर्ग गज तक के रेजिडेंशियल प्लॉट्स, मुख्य सड़कों पर स्थित कमर्शियल प्लॉट्स एवं कमर्शियल दुकानों के विकल्प उपलब्ध हैं। सही रेट्स व करंट इन्वेंट्री की जानकारी के लिए 8739904737 पर कॉल करें।
+                    à¤¯à¤¹à¤¾à¤ 100 à¤µà¤°à¥à¤— à¤—à¤œ à¤¸à¥‡ à¤²à¥‡à¤•à¤° 250+ à¤µà¤°à¥à¤— à¤—à¤œ à¤¤à¤• à¤•à¥‡ à¤°à¥‡à¤œà¤¿à¤¡à¥‡à¤‚à¤¶à¤¿à¤¯à¤² à¤ªà¥à¤²à¥‰à¤Ÿà¥à¤¸, à¤®à¥à¤–à¥à¤¯ à¤¸à¥œà¤•à¥‹à¤‚ à¤ªà¤° à¤¸à¥à¤¥à¤¿à¤¤ à¤•à¤®à¤°à¥à¤¶à¤¿à¤¯à¤² à¤ªà¥à¤²à¥‰à¤Ÿà¥à¤¸ à¤à¤µà¤‚ à¤•à¤®à¤°à¥à¤¶à¤¿à¤¯à¤² à¤¦à¥à¤•à¤¾à¤¨à¥‹à¤‚ à¤•à¥‡ à¤µà¤¿à¤•à¤²à¥à¤ª à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤¹à¥ˆà¤‚à¥¤ à¤¸à¤¹à¥€ à¤°à¥‡à¤Ÿà¥à¤¸ à¤µ à¤•à¤°à¤‚à¤Ÿ à¤‡à¤¨à¥à¤µà¥‡à¤‚à¤Ÿà¥à¤°à¥€ à¤•à¥€ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€ à¤•à¥‡ à¤²à¤¿à¤ 8739904737 à¤ªà¤° à¤•à¥‰à¤² à¤•à¤°à¥‡à¤‚à¥¤
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    5. फ्री साइट विजिट (Free Site Visit) कैसे बुक करें?
+                    5. à¤«à¥à¤°à¥€ à¤¸à¤¾à¤‡à¤Ÿ à¤µà¤¿à¤œà¤¿à¤Ÿ (Free Site Visit) à¤•à¥ˆà¤¸à¥‡ à¤¬à¥à¤• à¤•à¤°à¥‡à¤‚?
                     <i class="fa-solid fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer">
-                    आप इस वेबसाइट पर दिए गए साइट विजिट फॉर्म को भर सकते हैं या हमारे हेल्पलाइन नंबर **8739904737** पर कॉल या व्हाट्सएप मैसेज करके अपनी सुविधा अनुसार शनिवार/रविवार की फ्री पिक-अप साइट विजिट बुक कर सकते हैं।
+                    à¤†à¤ª à¤‡à¤¸ à¤µà¥‡à¤¬à¤¸à¤¾à¤‡à¤Ÿ à¤ªà¤° à¤¦à¤¿à¤ à¤—à¤ à¤¸à¤¾à¤‡à¤Ÿ à¤µà¤¿à¤œà¤¿à¤Ÿ à¤«à¥‰à¤°à¥à¤® à¤•à¥‹ à¤­à¤° à¤¸à¤•à¤¤à¥‡ à¤¹à¥ˆà¤‚ à¤¯à¤¾ à¤¹à¤®à¤¾à¤°à¥‡ à¤¹à¥‡à¤²à¥à¤ªà¤²à¤¾à¤‡à¤¨ à¤¨à¤‚à¤¬à¤° **8739904737** à¤ªà¤° à¤•à¥‰à¤² à¤¯à¤¾ à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤®à¥ˆà¤¸à¥‡à¤œ à¤•à¤°à¤•à¥‡ à¤…à¤ªà¤¨à¥€ à¤¸à¥à¤µà¤¿à¤§à¤¾ à¤…à¤¨à¥à¤¸à¤¾à¤° à¤¶à¤¨à¤¿à¤µà¤¾à¤°/à¤°à¤µà¤¿à¤µà¤¾à¤° à¤•à¥€ à¤«à¥à¤°à¥€ à¤ªà¤¿à¤•-à¤…à¤ª à¤¸à¤¾à¤‡à¤Ÿ à¤µà¤¿à¤œà¤¿à¤Ÿ à¤¬à¥à¤• à¤•à¤° à¤¸à¤•à¤¤à¥‡ à¤¹à¥ˆà¤‚à¥¤
                 </div>
             </div>
         </div>
@@ -1310,9 +1411,9 @@
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <h3 style="color: var(--accent);"><i class="fa-solid fa-gopuram"></i> श्री राम आंगण (Shree Ram Aangan)</h3>
-                <p style="margin-bottom: 16px;">136 बीघा RERA अप्रूव्ड थीम बेस्ड टाउनशिप • श्री आंगण डेवलपर</p>
-                <p><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> टोंक रोड, चाकसू, जयपुर (राजस्थान)</p>
+                <h3 style="color: var(--accent);"><i class="fa-solid fa-gopuram"></i> à¤¶à¥à¤°à¥€ à¤°à¤¾à¤® à¤†à¤‚à¤—à¤£ (Shree Ram Aangan)</h3>
+                <p style="margin-bottom: 16px;">136 à¤¬à¥€à¤˜à¤¾ RERA à¤…à¤ªà¥à¤°à¥‚à¤µà¥à¤¡ à¤¥à¥€à¤® à¤¬à¥‡à¤¸à¥à¤¡ à¤Ÿà¤¾à¤‰à¤¨à¤¶à¤¿à¤ª â€¢ à¤¶à¥à¤°à¥€ à¤†à¤‚à¤—à¤£ à¤¡à¥‡à¤µà¤²à¤ªà¤°</p>
+                <p><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> à¤Ÿà¥‹à¤‚à¤• à¤°à¥‹à¤¡, à¤šà¤¾à¤•à¤¸à¥‚, à¤œà¤¯à¤ªà¥à¤° (à¤°à¤¾à¤œà¤¸à¥à¤¥à¤¾à¤¨)</p>
                 <p><i class="fa-solid fa-phone" style="color: var(--accent);"></i> Helpline: <a href="tel:8739904737" style="color: var(--white); text-decoration: none; font-weight: 700;">8739904737</a></p>
                 <p><i class="fa-solid fa-certificate" style="color: var(--accent);"></i> RERA Reg: RAJ/P/2026/4660</p>
             </div>
@@ -1320,10 +1421,10 @@
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#overview">प्रोजेक्ट ओवरव्यू</a></li>
-                    <li><a href="#features">मुख्य सुविधाएं</a></li>
-                    <li><a href="#theme">राम मंदिर थीम</a></li>
-                    <li><a href="#site-visit">फ्री साइट विजिट</a></li>
+                    <li><a href="#overview">à¤ªà¥à¤°à¥‹à¤œà¥‡à¤•à¥à¤Ÿ à¤“à¤µà¤°à¤µà¥à¤¯à¥‚</a></li>
+                    <li><a href="#features">à¤®à¥à¤–à¥à¤¯ à¤¸à¥à¤µà¤¿à¤§à¤¾à¤à¤‚</a></li>
+                    <li><a href="#theme">à¤°à¤¾à¤® à¤®à¤‚à¤¦à¤¿à¤° à¤¥à¥€à¤®</a></li>
+                    <li><a href="#site-visit">à¤«à¥à¤°à¥€ à¤¸à¤¾à¤‡à¤Ÿ à¤µà¤¿à¤œà¤¿à¤Ÿ</a></li>
                 </ul>
             </div>
 
@@ -1340,7 +1441,7 @@
         </div>
 
         <div class="copyright">
-            <p>© 2026 Shree Aangan Developer - Shree Ram Aangan Township. All Rights Reserved. | RERA Reg: RAJ/P/2026/4660</p>
+            <p>Â© 2026 Shree Aangan Developer - Shree Ram Aangan Township. All Rights Reserved. | RERA Reg: RAJ/P/2026/4660</p>
         </div>
     </footer>
 
@@ -1357,8 +1458,58 @@
         </a>
     </div>
 
+    <!-- Video Player Popup Modal -->
+    <div class="video-modal-overlay" id="videoModal" onclick="if(event.target === this) closeVideoModal()">
+        <div class="video-modal-content">
+            <div class="video-modal-header">
+                <h3 id="videoModalTitle"><i class="fa-solid fa-circle-play" style="color: var(--accent);"></i> Project Video Player</h3>
+                <button class="video-modal-close" onclick="closeVideoModal()" title="Close Player">&times;</button>
+            </div>
+            <div class="video-modal-body" id="modalPlayerContainer">
+                <!-- Video / Iframe dynamically loaded here -->
+            </div>
+            <div class="video-modal-footer">
+                <a id="driveFolderBtn" href="#" target="_blank" class="btn btn-call" style="font-size: 0.85rem; padding: 8px 16px;">
+                    <i class="fa-brands fa-google-drive"></i> Open Google Drive Folder
+                </a>
+                <a href="https://wa.me/918739904737?text=Namaste!%20Mujhe%20Shree%20Ram%20Aangan%20Township%20ke%20Videos%20chahiye." target="_blank" class="btn btn-whatsapp" style="font-size: 0.85rem; padding: 8px 16px;">
+                    <i class="fa-brands fa-whatsapp"></i> Share on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript Interactions -->
     <script>
+        function openVideoModal(title, videoUrl, folderUrl) {
+            document.getElementById('videoModalTitle').innerText = title;
+            const modalPlayer = document.getElementById('modalPlayerContainer');
+            
+            let embedSrc = videoUrl;
+            if (videoUrl.includes('drive.google.com/file/d/')) {
+                const parts = videoUrl.split('/file/d/')[1].split('/');
+                const fileId = parts[0];
+                embedSrc = `https://drive.google.com/file/d/${fileId}/preview`;
+                modalPlayer.innerHTML = `<iframe src="${embedSrc}" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+            } else if (videoUrl.includes('drive.google.com/drive/folders/')) {
+                const folderId = videoUrl.split('/folders/')[1].split('?')[0];
+                embedSrc = `https://drive.google.com/embeddedfolderview?id=${folderId}#grid`;
+                modalPlayer.innerHTML = `<iframe src="${embedSrc}" allowfullscreen></iframe>`;
+            } else if (videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be')) {
+                modalPlayer.innerHTML = `<iframe src="${embedSrc}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            } else {
+                modalPlayer.innerHTML = `<iframe src="${embedSrc}" allowfullscreen></iframe>`;
+            }
+            
+            document.getElementById('driveFolderBtn').href = folderUrl || videoUrl;
+            document.getElementById('videoModal').classList.add('active');
+        }
+
+        function closeVideoModal() {
+            document.getElementById('videoModal').classList.remove('active');
+            document.getElementById('modalPlayerContainer').innerHTML = '';
+        }
+
         function toggleFaq(element) {
             const faqItem = element.parentElement;
             faqItem.classList.toggle('active');
